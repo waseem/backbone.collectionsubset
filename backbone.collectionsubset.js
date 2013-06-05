@@ -219,7 +219,7 @@
       options = {};
     }
     _.defaults(options, {
-      child: new this.constructor,
+      child: new this.constructor(options.childOptions.models, options.childOptions),
       parent: this
     });
     subset = new Backbone.CollectionSubset(options);
